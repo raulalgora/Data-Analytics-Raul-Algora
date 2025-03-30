@@ -1,4 +1,4 @@
-# SQLAZO: Plataforma Interactiva de Análisis Inmobiliario
+# Plataforma Interactiva de Análisis Inmobiliario
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" height="40" alt="python" />
@@ -10,11 +10,11 @@
 
 ## 📌 Descripción del Proyecto
 
-SQLAZO es una plataforma interactiva con mapas dinámicos que integra datos clave sobre los distritos de Valencia para ayudar a tomar decisiones informadas sobre vivienda. Desarrollado tras las recientes inundaciones en Valencia, permite analizar cómo estos eventos podrían impactar el mercado inmobiliario.
+Plataforma interactiva con mapas dinámicos que integra datos clave sobre los distritos de Valencia para ayudar a tomar decisiones informadas sobre vivienda. Desarrollado tras las recientes inundaciones en Valencia, permite analizar cómo estos eventos podrían impactar el mercado inmobiliario.
 
 ## 🎯 Problema y Solución
 
-Tras los recientes incidentes en Valencia, se prevé una redistribución de la demanda y una subida del precio de la vivienda. SQLAZO responde a preguntas como:
+Tras los recientes incidentes en Valencia, se prevé una redistribución de la demanda y una subida del precio de la vivienda. La herramienta responde a preguntas como:
 - ¿Dónde van a subir más los precios?
 - ¿Qué zonas ofrecen mejor relación calidad-precio?
 - ¿Qué áreas tienen mejores servicios esenciales?
