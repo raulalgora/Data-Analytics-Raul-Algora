@@ -1,0 +1,13 @@
+streamlit
+pandas
+requests
+folium
+streamlit_folium
+psycopg2
+luigi
+openpyxl
+shapely
+sqlalchemy
+bs4
+unidecode
+geopandas

@@ -1,0 +1,67 @@
+services:
+  luigi:
+    image: python:3.12.6
+    container_name: luigi_scheduler
+    volumes:
+      - ./:/app
+    working_dir: /app
+    command: bash -c "pip install --no-cache-dir -r requirements.txt && python orquest_luigi.py"
+    networks:
+      - app-network
+    depends_on:
+      - postgres
+
+  streamlit:
+    image: python:3.12.6
+    container_name: streamlit_app
+    volumes:
+      - ./:/app
+    working_dir: /app
+    command: bash -c "pip install --no-cache-dir -r requirements.txt && streamlit run mapa_sqlito.py"
+    ports:
+      - "8501:8501"
+    environment:
+      - POSTGRES_URI=postgresql://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD:-Welcome01}@postgres:5432/DISTRITOS
+    networks:
+      - app-network
+    depends_on:
+      - luigi
+      - postgres
+      - pgadmin
+
+  postgres:
+    container_name: postgres_container
+    image: postgres:12.1
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-Welcome01}
+      POSTGRES_DB: DISTRITOS
+    ports:
+      - "5432:5432"
+    networks:
+      - app-network
+    restart: unless-stopped
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  pgadmin:
+    container_name: pgadmin_container
+    image: dpage/pgadmin4:4.16
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL:-pgadmin4@pgadmin.org}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD:-admin}
+    ports:
+      - "${PGADMIN_PORT:-5050}:80"
+    networks:
+      - app-network
+    restart: unless-stopped
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin  # Configuración persistente de PgAdmin
+      - ./servers.json:/pgadmin4/servers.json  # Archivo de configuración inicial del servidor
+
+networks:
+  app-network:
+
+volumes:
+  pgadmin_data:  # Volumen para almacenar la configuración de PgAdmin
+  postgres_data:  # Volumen para datos persistentes de PostgreSQL

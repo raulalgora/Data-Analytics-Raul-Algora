@@ -1,0 +1,15 @@
+{
+    "Servers": {
+        "1": {
+            "Name": "sqlazo",
+            "Group": "Servers",
+            "Host": "postgres",
+            "Port": 5432,
+            "MaintenanceDB": "DISTRITOS",
+            "Username": "postgres",
+            "Password": "Welcome01",
+            "SSLMode": "prefer",
+            "Comment": "Servidor PostgreSQL configurado automáticamente"
+        }
+    }
+}
