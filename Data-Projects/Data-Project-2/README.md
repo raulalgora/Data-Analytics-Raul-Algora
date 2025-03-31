@@ -130,6 +130,7 @@ CloudIA destaca por:
 - **Extrapolable** a cualquier situación de emergencia
 
 ---
+<img width="1077" alt="Captura de pantalla 2025-03-31 a las 10 23 12" src="https://github.com/user-attachments/assets/23a01d29-946b-46ea-97b6-84243ffa4a26" />
 
 <div align="center">
   <i>Este proyecto fue desarrollado como parte del Data Project 2 del Master en Big Data y Cloud Technologies.</i>
