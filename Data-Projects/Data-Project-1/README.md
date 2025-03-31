@@ -67,5 +67,4 @@ Para futuras versiones consideramos incorporar:
 - Datos de transporte público (EMT, Valenbisi)
 - Predicciones de precios futuros
 
-<img width="758" alt="Captura de pantalla 2025-03-31 a las 10 25 32" src="https://github.com/user-attachments/assets/7ff633d3-4a84-4b03-a68d-b9bc7596556b" />
-
+<img width="755" alt="Captura de pantalla 2025-03-31 a las 10 26 35" src="https://github.com/user-attachments/assets/f45dae75-9ed6-45a1-8b48-b22ce25315b8" />
