@@ -28,7 +28,7 @@ In this folder, you'll find the group projects that were focused on solving real
 4. **Deployment**: Building an interactive dashboard or deploying models to production.
 
 The three projects are:
-1. **SQLAZO: Plataforma interactiva de análisis inmobiliario.** ⚙️
-2. **CloudIA: Sistema de conexión en tiempo real entre necesidad y ayuda.** 🧑‍🤝‍🧑
+1. **Plataforma interactiva de análisis inmobiliario.** ⚙️
+2. **Sistema de conexión en tiempo real entre necesidad y ayuda.** 🧑‍🤝‍🧑
 
 ## 🎓 Final Master Thesis (TFM)
