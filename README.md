@@ -8,13 +8,13 @@ Welcome to the repository of my **Master in Big Data & Cloud Technologies**! Thi
 
 ## 🔧 Technologies and Tools Used
 The projects involve a wide range of technologies, including:
-- **Python** 🐍
-- **Cloud Platforms (AWS, GCP, Azure)** 🌐
-- **SQL & NoSQL Databases** 🗃️
-- **Big Data Processing (Spark)** 📡
-- **Data Visualization** 📈
-- **Docker** 🐳
-- **ETL & Data Pipelines** 🔄
+- **Python** 
+- **Cloud Platforms (AWS, GCP, Azure)** 
+- **SQL & NoSQL Databases** 
+- **Big Data Processing (Spark)** 
+- **Data Visualization** 
+- **Docker** 
+- **ETL & Data Pipelines** 
 
 ## 🧑‍💻 Exercises
 In this section, you'll find exercises grouped by technology. Each subfolder corresponds to a specific set of challenges and lessons that I completed, such as:
@@ -28,7 +28,7 @@ In this folder, you'll find the group projects that were focused on solving real
 4. **Deployment**: Building an interactive dashboard or deploying models to production.
 
 The three projects are:
-1. **Plataforma interactiva de análisis inmobiliario.** ⚙️
-2. **Sistema de conexión en tiempo real entre necesidad y ayuda.** 🧑‍🤝‍🧑
+1. **Plataforma interactiva de análisis inmobiliario.** 
+2. **Sistema de conexión en tiempo real entre necesidad y ayuda.**
 
 ## 🎓 Final Master Thesis (TFM)
