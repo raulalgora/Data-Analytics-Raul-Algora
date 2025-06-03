@@ -30,5 +30,7 @@ In this folder, you'll find the group projects that were focused on solving real
 The three projects are:
 1. **Interactive real estate analysis platform.** 
 2. **Real-time Connection System Between Needs and Aid.**
+3. **TravelPlanner: Smart AI Vacation Planner.**
 
 ## 🎓 Final Master Thesis (TFM)
+In progress...
