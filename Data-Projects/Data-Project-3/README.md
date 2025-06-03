@@ -1,52 +1,89 @@
-# DataProject_3
+# TravelPlanner: Smart AI Vacation Planner
 
-## Descripción General del Proyecto
+<div align="center">
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/googlecloud/googlecloud-original.svg" height="60" alt="Google Cloud" />
+  <img width="20" />
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" height="60" alt="Python" />
+  <img width="20" />
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original.svg" height="60" alt="Docker" />
+  <img width="20" />
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/streamlit/streamlit-original.svg" height="60" alt="Streamlit" />
+  <img width="20" />
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/grafana/grafana-original.svg" height="60" alt="Grafana" />
+</div>
 
-Este proyecto es una aplicación de chat para la planificación de vacaciones que utiliza un sistema multiagente. La aplicación cuenta con un frontend en Streamlit para la interacción del usuario, que se comunica con una API backend impulsada por un agente de IA diseñado para ayudar a los usuarios a planificar sus viajes.
+---
 
-El proyecto consta de tres componentes principales:
+## 📌 Project Description
 
-1.  **Frontend Streamlit**: Una interfaz de chat donde los usuarios pueden interactuar con el agente de planificación de vacaciones.
-2.  **API del Agente**: Una aplicación FastAPI que integra el sistema multiagente (potencialmente utilizando Langraph) que procesa las consultas del usuario relacionadas con la planificación de vacaciones.
-3.  **API de Datos**: Una aplicación FastAPI que proporciona los datos necesarios (como hoteles, vuelos, coches, información de usuario y detalles de viaje) al agente de IA.
+**TravelPlanner** is an AI-powered solution for efficient and intelligent vacation planning. The architecture consists of an intuitive frontend, specialized backend APIs, and optimized data storage, all deployed in the cloud using GCP services.
 
-## Instrucciones de despliegue en local
+### Main Components
 
-1.  **Clonar el Repositorio**:
+* **Frontend (Streamlit)**: A chat-based interface that allows users to interact with TravelPlanner.
+* **AI Agent (FastAPI + Multi-Agent)**: An intelligent system that manages user decisions.
+* **Data API (FastAPI)**: Provides data on hotels, flights, cars, users, and trips.
 
-    ```bash
-    git clone <repository-url>
-    cd DataProject_3
-    ```
+---
 
-2.  **Crear archivo .env**
+## 🎯 Objective
 
-    ```text
-    GOOGLE_API_KEY = <GOOGLE_API_KEY>
-    SERPAPI_KEY = <SERPAPI_KEY>
-    RAPIDAPI_KEY = <RAPIDAPI_KEY>
-    DATA_API_URL = <DATA_API_URL>
-    AGENT_API_URL = <AGENT_API_URL>
-    ```
+To offer an interactive tool that, through AI, simplifies personalized vacation planning, accessing real-time data on multiple aspects of the trip, all from a simple and accessible chat.
 
-3.  **Docker compose up**:
+---
 
-    ```bash
-    docker compose -f 'docker-compose.yml' up -d --build
-    ```
+## 🛠️ Technologies Used
 
-## Arquitectura de Despliegue en GCP
+<table>
+  <tr>
+    <td><b>Cloud Infrastructure</b></td>
+    <td>
+      • Google Cloud Platform (GCP)<br>
+      • Cloud Run (Serverless app hosting)<br>
+      • Cloud Functions (Transformations)<br>
+      • Artifact Registry (Container images)<br>
+      • BigQuery (Structured data storage)
+    </td>
+  </tr>
+  <tr>
+    <td><b>Frontend</b></td>
+    <td>• Streamlit (Chat interface)</td>
+  </tr>
+  <tr>
+    <td><b>Backend Development</b></td>
+    <td>
+      • Python (Business logic)<br>
+      • FastAPI (Agent and Data APIs)<br>
+      • Docker (Containers)<br>
+      • Langraph (Multi-Agent System)
+    </td>
+  </tr>
+  <tr>
+    <td><b>Monitoring</b></td>
+    <td>• Grafana (Data visualization)</td>
+  </tr>
+</table>
 
-![Arquitectura](img/arquitectura.png)
+---
 
-La aplicación se despliega en Google Cloud Platform (GCP) utilizando los siguientes servicios:
+## 📊 Visualization and Results
 
--   **Streamlit (Cloud Run)**: Aloja la interfaz de chat del frontend.
--   **Artifact Registry**: Utilizado para almacenar imágenes de contenedor.
--   **Agente de IA (Cloud Run)**: Aloja la API backend con el sistema multiagente.
--   **API (Cloud Run)**: Aloja la API de datos.
--   **Transformación (Cloud Functions)**: Incluye Cloud Functions para procesar datos relacionados con Vuelos, Hoteles y Coches.
--   **Almacenamiento (BigQuery)**: Almacena datos en tablas de BigQuery para Hoteles, Vuelos, Coches, Usuarios y Viajes.
--   **Grafana (Cloud Run)**: Desplegado para monitorización y visualización.
+* 📈 Grafana dashboards connected to **BigQuery**
+* 🌍 Statistics on users, destinations, and travel preferences
+* 🔍 Monitoring of API and agent performance
+* 🧠 Real-time tracking of data flows and responses
 
-El flujo de datos implica que el frontend Streamlit interactúa con la API del Agente de IA, que a su vez se comunica con la API de Datos y las Cloud Functions de Transformación. Las funciones de Transformación interactúan con el almacenamiento de BigQuery. El Agente de IA también interactúa directamente con la API de Datos. La API de Datos también interactúa con BigQuery para los datos de Viajes. Artifact Registry está conectado a Streamlit y al Agente de IA. Grafana se conecta a BigQuery para la monitorización.
+---
+
+## 💡 Innovation and Scalability
+
+* 🧱 **Modular and scalable architecture** on GCP
+* 🤖 Integration of a **multi-agent system** for decision making
+* ⏱️ **Real-time data** for personalized recommendations
+* ➕ Ability to extend to new domains (restaurants, activities, etc.)
+
+---
+
+<div align="center">
+  <img src="img/arquitectura.png" alt="Project Architecture" width="1000"/>
+</div>
