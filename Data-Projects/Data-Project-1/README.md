@@ -1,4 +1,4 @@
-# Plataforma Interactiva de Análisis Inmobiliario
+# Interactive Real Estate Analysis Platform
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" height="40" alt="python" />
@@ -8,63 +8,64 @@
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original.svg" height="40" alt="docker" />
 </div>
 
-## 📌 Descripción del Proyecto
+## 📌 Project Description
 
-Plataforma interactiva con mapas dinámicos que integra datos clave sobre los distritos de Valencia para ayudar a tomar decisiones informadas sobre vivienda. Desarrollado tras las recientes inundaciones en Valencia, permite analizar cómo estos eventos podrían impactar el mercado inmobiliario.
+An interactive platform with dynamic maps that integrates key data about Valencia's districts to support informed housing decisions. Developed after the recent floods in Valencia, it allows users to analyze how these events could impact the real estate market.
 
-## 🎯 Problema y Solución
+## 🎯 Problem and Solution
 
-Tras los recientes incidentes en Valencia, se prevé una redistribución de la demanda y una subida del precio de la vivienda. La herramienta responde a preguntas como:
-- ¿Dónde van a subir más los precios?
-- ¿Qué zonas ofrecen mejor relación calidad-precio?
-- ¿Qué áreas tienen mejores servicios esenciales?
+Following the recent events in Valencia, a redistribution in housing demand and rising prices are expected. This tool helps answer key questions such as:
+- Where will prices increase the most?
+- Which areas offer the best value for money?
+- Which districts provide better access to essential services?
 
-Nuestra plataforma permite:
-- Filtrar por ingresos y preferencias
-- Visualizar distritos con códigos de color
-- Ver distribución de zonas verdes
-- Obtener datos detallados de cada distrito
-- Comparar indicadores entre zonas
+Our platform enables users to:
+- Filter based on income and preferences
+- Visualize districts with color-coded indicators
+- See green space distribution
+- Access detailed data for each district
+- Compare indicators between zones
 
-## 🛠️ Arquitectura Técnica
+## 🛠️ Technical Architecture
 
-El proyecto está estructurado en cuatro componentes principales:
+The project is structured into four main components:
 
-### 1. Ingestión de Datos
-- **Fuentes**: Ayuntamiento de Valencia (API), INE (XLSX), Idealista (HTML)
-- **Datos recopilados**: Colegios, hospitales, metro, zonas verdes, precios de alquiler y variaciones
+### 1. Data Ingestion
+- **Sources**: Valencia City Council (API), INE (XLSX), Idealista (HTML)
+- **Data collected**: Schools, hospitals, metro, green areas, rental prices, and their variations
 
-### 2. Tratamiento del Dato
-- Python para procesamiento y transformación
-- PostgreSQL para almacenamiento
-- Shapely para análisis geoespacial
-- Tabla de equivalencias para unificar nomenclaturas de distritos
+### 2. Data Processing
+- Python for data cleaning and transformation
+- PostgreSQL for storage
+- Shapely for geospatial analysis
+- Equivalency table to unify district naming
 
-### 3. Visualización
-- Interfaz web con Streamlit y Folium
-- Mapas interactivos con selección de distritos
-- Filtrado por ingresos mensuales
-- Capas activables (distritos, zonas verdes)
+### 3. Visualization
+- Web interface built with Streamlit and Folium
+- Interactive maps with district selection
+- Filtering by monthly income
+- Toggleable layers (districts, green spaces)
 
-### 4. Dockerización y Automatización
-- Contenedores Docker para cada componente
-- Luigi para orquestación de tareas
-- Automatización del pipeline de datos
+### 4. Containerization and Automation
+- Docker containers for each component
+- Luigi for task orchestration
+- Automated data pipeline
 
-## 📊 Valor de Negocio
+## 📊 Business Value
 
-El proyecto tiene dos enfoques comerciales:
+The project targets two business models:
 
-**B2B**: Suscripción para inmobiliarias y profesionales con análisis detallados.
+**B2B**: Subscription model for real estate agencies and professionals with detailed analytics.
 
-**B2C**: Modelo freemium para usuarios particulares con comparador de zonas.
+**B2C**: Freemium model for individual users with a zone comparison tool.
 
-## 🚀 Próximos Pasos
+## 🚀 Next Steps
 
-Para futuras versiones consideramos incorporar:
-- Datos de criminalidad
-- Información de supermercados y centros comerciales
-- Datos de transporte público (EMT, Valenbisi)
-- Predicciones de precios futuros
+Future versions may include:
+- Crime data
+- Supermarket and shopping center information
+- Public transport data (EMT, Valenbisi)
+- Future price predictions
 
-<img width="755" alt="Captura de pantalla 2025-03-31 a las 10 26 35" src="https://github.com/user-attachments/assets/f45dae75-9ed6-45a1-8b48-b22ce25315b8" />
+<img width="755" alt="Screenshot 2025-03-31 at 10 26 35" src="https://github.com/user-attachments/assets/f45dae75-9ed6-45a1-8b48-b22ce25315b8" />
+
