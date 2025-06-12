@@ -1,3 +1,82 @@
+# CloudIA: Connecting Need and Help in Real Time
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/googlecloud/googlecloud-original.svg" height="60" alt="Google Cloud" />
+  <img width="20" />
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" height="60" alt="Python" />
+  <img width="20" />
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/terraform/terraform-original.svg" height="60" alt="Terraform" />
+</div>
+
+## 📌 Project Description
+
+CloudIA is a technological solution designed to address critical challenges in humanitarian aid management during emergency situations. The system leverages the power of cloud computing and artificial intelligence to efficiently connect people in need with volunteers willing to help — all in real time.
+
+### Identified Challenges
+
+- **Lack of coordination** between aid organizations and affected individuals  
+- **Delays in response** to urgent needs  
+- **Lack of visibility** of specific needs across different areas  
+- **Inefficient distribution** of resources and volunteers  
+- **No real-time updates** on the situation  
+
+## 🎯 Objective
+
+CloudIA’s primary goal is to create an automated connection system between people in need and volunteers, using AI and cloud services to optimize aid delivery and resource distribution during emergencies.
+
+## 🛠️ Technologies Used
+
+<table>
+  <tr>
+    <td><b>Cloud Infrastructure</b></td>
+    <td>
+      • Google Cloud Platform (GCP)<br>
+      • Cloud Run (Serverless services)<br>
+      • Cloud Functions<br>
+      • Pub/Sub (Real-time messaging)<br>
+      • Dataflow (Streaming data processing)<br>
+      • BigQuery (Data analysis)
+    </td>
+  </tr>
+  <tr>
+    <td><b>Frontend</b></td>
+    <td>• Telegram API (Main user interface)</td>
+  </tr>
+  <tr>
+    <td><b>Development</b></td>
+    <td>
+      • Python (Business logic)<br>
+      • Terraform (Infrastructure as Code)
+    </td>
+  </tr>
+  <tr>
+    <td><b>Artificial Intelligence</b></td>
+    <td>
+      • GPT-4o (Natural language processing)<br>
+      • ReAct (Intelligent decision-making)
+    </td>
+  </tr>
+</table>
+
+## 🏗️ Solution Architecture
+
+CloudIA is structured into several interconnected components:
+
+### 1. User Interface
+- Implemented via a Telegram bot  
+- Provides easy access without the need for an additional app  
+
+### 2. Data Processing
+- **Data sources**: Collection of structured information  
+- **Reading**: Processes incoming messages to extract key data  
+- **Matching**: Smart matching system based on:  
+  - Type of need  
+  - Geographic location  
+  - Specific requirements  
+
+### 3. Data Transformation
+The data flow follows three key stages:
+
 
 - **Reading**: Capturing and analyzing messages  
 - **Matching**: Algorithm that links needs with available resources  
@@ -47,8 +126,7 @@ CloudIA stands out for:
 - **Data-driven optimization** for future operations  
 - **Scalability** to any emergency context  
 
-
 ---
-<img width="1077" alt="Captura de pantalla 2025-03-31 a las 10 23 12" src="https://github.com/user-attachments/assets/23a01d29-946b-46ea-97b6-84243ffa4a26" />
+<img width="1077" alt="Screenshot 2025-03-31 at 10 23 12" src="https://github.com/user-attachments/assets/23a01d29-946b-46ea-97b6-84243ffa4a26" />
 
 
