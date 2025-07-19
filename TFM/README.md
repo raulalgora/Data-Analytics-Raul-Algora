@@ -1,4 +1,14 @@
-# TFM_Caixa
+# TFM CaixaBank: Sistema de Recomendación de Cursos
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/googlecloud/googlecloud-original.svg" height="60" alt="Google Cloud Platform" />
+  <img width="30" />
+  <img src="https://upload.wikimedia.org/wikipedia/commons/d/de/AirflowLogo.png" height="60" alt="Apache Airflow" />
+  <img width="30" />
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/terraform/terraform-original.svg" height="60" alt="Terraform" />
+</div>
+
+---
 
 Este repositorio contiene el proyecto de TFM para CaixaBank, una solución integral que abarca la ingesta, procesamiento, análisis y visualización de datos, utilizando tecnologías modernas de orquestación, cloud, pipelines de datos y aplicaciones web.
 
@@ -45,6 +55,11 @@ TFM_Caixabank/
 ---
 
 ## Componentes Principales
+
+<div align="center">
+  <img src="img/arquitectura.png" alt="Project Architecture" width="1000"/>
+</div>
+
 
 ### Airflow (Orquestación de Pipelines)
 
