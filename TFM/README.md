@@ -1,173 +1,228 @@
-# TFM CaixaBank: Sistema de Recomendación de Cursos
+# TFM CaixaBank: Intelligent Course Recommendation System 
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/googlecloud/googlecloud-original.svg" height="60" alt="Google Cloud Platform" />
-  <img width="30" />
-  <img src="https://upload.wikimedia.org/wikipedia/commons/d/de/AirflowLogo.png" height="60" alt="Apache Airflow" />
-  <img width="30" />
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/terraform/terraform-original.svg" height="60" alt="Terraform" />
+
+<div style="display: flex; justify-content: center; align-items: center; gap: 40px; margin: 20px 0;">
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/googlecloud/googlecloud-original.svg" height="70" alt="Google Cloud Platform" />
+  <img src="https://upload.wikimedia.org/wikipedia/commons/d/de/AirflowLogo.png" height="70" alt="Apache Airflow" />
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/terraform/terraform-original.svg" height="70" alt="Terraform" />
+</div>
+
 </div>
 
 ---
 
-Este repositorio contiene el proyecto de TFM para CaixaBank, una solución integral que abarca la ingesta, procesamiento, análisis y visualización de datos, utilizando tecnologías modernas de orquestación, cloud, pipelines de datos y aplicaciones web.
-
-## Tabla de Contenidos
-
-- [Descripción General](#descripción-general)
-- [Estructura del Proyecto](#estructura-del-proyecto)
-- [Componentes Principales](#componentes-principales)
-  - [Airflow (Orquestación de Pipelines)](#airflow-orquestación-de-pipelines)
-  - [API](#api)
-  - [Cloud Functions](#cloud-functions)
-  - [Dataflow](#dataflow)
-  - [Frontend](#frontend)
-  - [Terraform (Infraestructura como Código)](#terraform-infraestructura-como-código)
-- [Requisitos](#requisitos)
-- [Cómo Ejecutar](#cómo-ejecutar)
-- [Autores](#autores)
-- [Licencia](#licencia)
-
----
-
-## Descripción General
-
-El objetivo de este proyecto es crear una arquitectura robusta y escalable para la gestión de datos y recomendaciones personalizadas, integrando diferentes tecnologías de procesamiento, almacenamiento y visualización, tanto en local como en la nube.
-
----
-
-## Estructura del Proyecto
-
-```
-TFM_Caixabank/
-│
-├── airflow-docker/           # Orquestación de pipelines con Apache Airflow en Docker
-├── API/                     # API REST para interacción y procesamiento de datos
-├── cloud-functions/         # Funciones serverless para procesamiento específico en GCP
-├── dataflow_courses/        # Pipelines de procesamiento de datos con Apache Beam/Dataflow
-├── front/                   # Aplicación web para visualización y carga de datos (Streamlit)
-├── terraform/               # Infraestructura como código (IaC) para GCP
-├── cloudbuild.yaml          # Configuración de CI/CD en Google Cloud Build
-├── README.md                # Este archivo
-└── requirements.txt         # Requisitos globales del proyecto
-```
-
----
-
-## Componentes Principales
-
 <div align="center">
-  <img src="img/arquitectura.png" alt="Project Architecture" width="1000"/>
+<h3> <i>Comprehensive solution for intelligent data management and personalized recommendations</i></h3>
+<p><b>Integrating modern orchestration, cloud, data pipelines and web applications</b></p>
 </div>
 
+---
 
-### Airflow (Orquestación de Pipelines)
+## 📋 Table of Contents
 
-- **Ubicación:** `airflow-docker/`
-- **Descripción:** Contiene la configuración y los DAGs de Apache Airflow para orquestar los flujos de trabajo de ingesta, transformación y carga de datos.
-- **Archivos clave:**
-  - `docker-compose.yaml`: Despliegue de Airflow en contenedores.
-  - `dags/`: Scripts de los DAGs, incluyendo scraping, procesamiento y carga de datos.
-
-### API
-
-- **Ubicación:** `API/`
-- **Descripción:** API REST desarrollada en Python para exponer servicios de procesamiento y consulta de datos.
-- **Archivos clave:**
-  - `api_server.py`: Servidor principal de la API.
-  - `add_loadtime_column.py`, `inspect_columns.py`: Scripts de utilidades para manipulación de datos.
-  - `Dockerfile`: Contenedor para despliegue de la API.
-
-### Cloud Functions
-
-- **Ubicación:** `cloud-functions/`
-- **Descripción:** Conjunto de funciones serverless desplegadas en Google Cloud Functions para tareas específicas como extracción, embedding, recomendación y procesamiento de CVs.
-- **Subcarpetas:**
-  - `course-pipeline-job/`
-  - `cv-pipeline/`
-  - `cv-uploader/`
-  - `find-similar-courses/`
-  - `recomendacion-gap-rol/`
-  - `recomendacion-semantica/`
-  - `recomendar-gap-rol/`
-- **Cada subcarpeta** contiene su propio `main.py`, dependencias y lógica específica.
-
-### Dataflow
-
-- **Ubicación:** `dataflow_courses/`
-- **Descripción:** Pipelines de procesamiento de datos usando Apache Beam, ejecutables en Google Dataflow.
-- **Archivos clave:**
-  - `courses_pipeline_fixed.py`: Pipeline principal de procesamiento de cursos.
-  - `Dockerfile`: Imagen para ejecutar el pipeline en Dataflow.
-
-### Frontend
-
-- **Ubicación:** `front/`
-- **Descripción:** Aplicación web desarrollada con Streamlit para visualización de dashboards, búsqueda temática y carga de CVs.
-- **Archivos clave:**
-  - `app.py`: Entrada principal de la app.
-  - `pages/`: Páginas de la aplicación (dashboard, búsqueda, upload de CV).
-  - `Dockerfile`: Contenedor para despliegue del frontend.
-
-### Terraform (Infraestructura como Código)
-
-- **Ubicación:** `terraform/`
-- **Descripción:** Scripts de Terraform para desplegar y gestionar la infraestructura en Google Cloud Platform (GCP), incluyendo BigQuery, Cloud Run y Composer.
-- **Estructura modular:** Cada recurso tiene su propio módulo reutilizable.
+- 🎯 [General Description](#-general-description)
+- 🏗️ [Project Structure](#️-project-structure)
+- ⚙️ [Main Components](#️-main-components)
+  - 🔄 [Airflow (Pipeline Orchestration)](#-airflow-pipeline-orchestration)
+  - 🚀 [API](#-api)
+  - ☁️ [Cloud Functions](#️-cloud-functions)
+  - 📊 [Dataflow](#-dataflow)
+  - 🖥️ [Frontend](#️-frontend)
+  - 🏗️ [Terraform (IaC)](#️-terraform-infrastructure-as-code)
+- 📦 [Requirements](#-requirements)
+- 🚀 [How to Run](#-how-to-run)
+- 📄 [License](#-license)
 
 ---
 
-## Requisitos
+## 🎯 General Description
 
-- Docker y Docker Compose
-- Python 3.8+
-- Google Cloud SDK
-- Terraform
-- (Opcional) Entorno virtual para Python
+> **Transforming corporate training with Artificial Intelligence**
 
-Consulta los archivos `requirements.txt` de cada componente para dependencias específicas.
+This project represents an **innovative solution** for CaixaBank that addresses the challenge of creating personalized training recommendations without relying on historical user interaction data.
 
----
-
-## Cómo Ejecutar
-
-1. **Clonar el repositorio**
-   ```bash
-   git clone https://github.com/tu_usuario/TFM_Caixabank.git
-   cd TFM_Caixabank
-   ```
-
-2. **Levantar Airflow en local**
-   ```bash
-   cd airflow-docker
-   docker-compose up
-   ```
-
-3. **Desplegar la API**
-   ```bash
-   cd ../API
-   docker build -t tfm_api .
-   docker run -p 8000:8000 tfm_api
-   ```
-
-4. **Ejecutar el Frontend**
-   ```bash
-   cd ../front
-   streamlit run app.py
-   ```
-
-5. **Desplegar infraestructura en GCP**
-   ```bash
-   cd ../terraform
-   terraform init
-   terraform apply
-   ```
-
-6. **Desplegar Cloud Functions y Dataflow**
-   - Sigue las instrucciones específicas en cada subcarpeta.
+### ✨ **Key Features**
+- 🧠 **No-Feedback Recommendation System**: Works from day one
+- 📊 **Processing +18,000 courses**: Enterprise scalability
+- 🎯 **Advanced Personalization**: Based on deep semantic analysis
+- ⚡ **Cloud-Native Architecture**: Deployed on Google Cloud Platform
+- 🔄 **Automated Pipelines**: Intelligent orchestration with Airflow
 
 ---
 
-## Licencia
+## 🏗️ Project Structure
 
-Este proyecto está bajo la Licencia MIT. Consulta el archivo LICENSE para más detalles.
+```
+🏢 TFM_Caixabank/
+┃
+┣── 🐳 airflow-docker/           # Pipeline orchestration with Apache Airflow
+┣── 🚀 API/                     # REST API for interaction and processing
+┣── ☁️  cloud-functions/         # Serverless functions on GCP
+┃   ┣── 📄 cv-pipeline/          # Intelligent CV analysis
+┃   ┣── 🔍 find-similar-courses/ # Recommendation engine
+┃   ┣── 🎯 recomendacion-semantica/
+┃   ┗── 📈 recomendacion-gap-rol/
+┣── 🔄 dataflow_courses/        # Distributed pipelines (Apache Beam)
+┣── 🖥️  front/                   # Interactive web interface (Streamlit)
+┣── 🏗️  terraform/               # Infrastructure as Code
+┣── 📦 cloudbuild.yaml          # CI/CD Pipeline
+┗── 📋 requirements.txt         # Project dependencies
+```
+
+---
+
+## ⚙️ Main Components
+
+<div align="center">
+  <img src="img/arquitectura.png" alt="🏗️ Complete System Architecture" width="1000"/>
+  <br><i>🏗️ Hybrid Architecture: Batch + Event-Driven Processing</i>
+</div>
+
+---
+
+### 🔄 Airflow (Pipeline Orchestration)
+
+- **📍 Location:** `airflow-docker/`
+- **🔧 Technology:** Apache Airflow + Docker + Cloud Composer
+- **⚡ Features:**
+  - 📅 Daily automated batch processing
+  - 🛡️ Fault tolerance and automatic recovery
+  - 📊 Real-time pipeline monitoring
+  - 🔄 Auto-scaling based on demand
+
+**📂 Key Files:**
+- `docker-compose.yaml`: Containerized deployment
+- `dags/`: Orchestration and processing scripts
+
+---
+
+### 🚀 API
+
+- **📍 Location:** `API/`
+- **🔧 Technology:** Python + FastAPI + Cloud Run
+- **⚡ Features:**
+  - 🔍 Semantic search APIs
+  - 📊 Data analysis endpoints
+  - 🎯 Personalized recommendation services
+  - 📈 Real-time performance metrics
+
+**📂 Key Files:**
+- `api_server.py`: Main FastAPI server
+- `Dockerfile`: Containerization for Cloud Run
+
+---
+
+### ☁️ Cloud Functions
+
+- **📍 Location:** `cloud-functions/`
+- **🔧 Technology:** Google Cloud Functions + Python
+- **⚡ Specialized Functions:**
+  - 📄 `cv-pipeline/`: AI-powered CV analysis
+  - 🔍 `find-similar-courses/`: Recommendation engine
+  - 🎯 `recomendacion-semantica/`: Semantic search
+  - 📈 `recomendacion-gap-rol/`: Skill gap analysis
+
+**🚀 Scalability:** Infinite auto-scaling + Pay-per-use
+
+---
+
+### 📊 Dataflow
+
+- **📍 Location:** `dataflow_courses/`
+- **🔧 Technology:** Apache Beam + Google Dataflow
+- **⚡ Features:**
+  - 📊 Processing +18,000 courses simultaneously
+  - 🔄 Distributed and parallel ETL
+  - 🧠 Semantic enrichment with LLMs
+  - 📈 Automatic resource optimization
+
+**📂 Main File:**
+- `courses_pipeline_fixed.py`: Course transformation pipeline
+
+---
+
+### 🖥️ Frontend
+
+- **📍 Location:** `front/`
+- **🔧 Technology:** Streamlit + Cloud Run
+- **⚡ Features:**
+  - 📊 Interactive metrics dashboard
+  - 🔍 Advanced thematic search
+  - 📄 CV upload and analysis
+  - 🎯 Recommendation visualization
+
+**📂 Structure:**
+- `app.py`: Main application
+- `pages/`: Functionality modules
+
+---
+
+### 🏗️ Terraform (Infrastructure as Code)
+
+- **📍 Location:** `terraform/`
+- **🔧 Technology:** Terraform + Google Cloud Platform
+- **⚡ Managed Resources:**
+  - 🗄️ BigQuery datasets and tables
+  - ☁️ Cloud Functions and Cloud Run
+  - 🔄 Cloud Composer and Dataflow
+  - 🔐 IAM and granular security
+
+**🎯 Benefits:** Automated deployment + Disaster Recovery
+
+---
+
+## 📦 Requirements
+
+### 🛠️ **Required Tools**
+- 🐳 **Docker** and Docker Compose
+- 🐍 **Python 3.8+** 
+- ☁️ **Google Cloud SDK** configured
+- 🏗️ **Terraform >= 1.0**
+- 🔑 **GCP Account** with administrative permissions
+
+### 📚 **Dependencies**
+Check the `requirements.txt` files in each component for specific dependencies.
+
+---
+
+## 🚀 How to Run
+
+### 🔄 **Local Deployment (Development)**
+
+```bash
+# 1️⃣ Clone repository
+git clone https://github.com/raulalgora/TFM_Caixabank.git
+cd TFM_Caixabank
+
+# 2️⃣ Start Airflow
+cd airflow-docker && docker-compose up -d
+
+# 3️⃣ Deploy API
+cd ../API && docker build -t tfm_api . && docker run -p 8000:8000 tfm_api
+
+# 4️⃣ Run Frontend
+cd ../front && streamlit run app.py
+```
+
+### ☁️ **Production Deployment (GCP)**
+
+```bash
+# 5️⃣ Infrastructure
+cd terraform && terraform init && terraform apply
+
+# 6️⃣ Cloud Functions
+cd ../cloud-functions && ./deploy_all_functions.sh
+```
+
+---
+
+## 📄 License
+
+<div align="center">
+
+This project is under the **MIT License**. 
+
+🏦 **Developed in collaboration with CaixaBank Tech** 🏦
+
+</div>
